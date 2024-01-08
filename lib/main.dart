@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/route_manager.dart';
 import 'package:school_meal_application/controller/main_controller.dart';
 import 'package:school_meal_application/controller/school_controller.dart';
 import 'package:school_meal_application/screens/main_screen/main_screen.dart';
