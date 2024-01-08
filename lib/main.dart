@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/search',
-          page: () => SearchScreen(),
+          page: () => const SearchScreen(),
           binding: BindingsBuilder(() {
             Get.put(SchoolController());
           }),

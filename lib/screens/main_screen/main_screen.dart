@@ -11,7 +11,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        title: Text("오늘의 급식은?"),
+        title: const Text("오늘의 급식은?"),
         actions: [
           IconButton(
             onPressed: () => Get.toNamed('/search')?.then((value) {
@@ -38,12 +38,12 @@ class MainScreen extends StatelessWidget {
                       children: [
                         TextSpan(
                           text: Get.find<MainController>().schoolInfo.name,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                           ),
                         ),
-                        TextSpan(text: "입니다."),
+                        const TextSpan(text: "입니다."),
                       ],
                     ),
                   );
@@ -59,12 +59,12 @@ class MainScreen extends StatelessWidget {
                   onPressed: () {
                     Get.find<MainController>().previousMealType();
                   },
-                  icon: Icon(Icons.chevron_left),
+                  icon: const Icon(Icons.chevron_left),
                 ),
                 Expanded(
                   child: Card(
                     child: Padding(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       child: Obx(
                         () {
                           MainController controller =
@@ -101,7 +101,7 @@ class MainScreen extends StatelessWidget {
                   onPressed: () {
                     Get.find<MainController>().nextpreviousMealType();
                   },
-                  icon: Icon(Icons.chevron_right),
+                  icon: const Icon(Icons.chevron_right),
                 ),
               ],
             ),

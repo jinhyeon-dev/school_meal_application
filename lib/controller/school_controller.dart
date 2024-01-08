@@ -8,9 +8,11 @@ class SchoolController {
   final RxInt _indexState = RxInt(1);
 
   set name(String value) => _nameState(value);
+
   String get name => _nameState.value;
 
   int get index => _indexState.value;
+
   set index(int value) => _indexState(value);
 
   Future<List<SchoolInfo>> getSchools(int index, String name) =>

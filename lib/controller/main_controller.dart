@@ -10,9 +10,11 @@ class MainController {
   final Rx<SchoolInfo> _schoolInfoState = Rx(SchoolInfo.empty());
 
   MealType get mealType => _mealTypeState.value;
+
   set _mealType(MealType value) => _mealTypeState(value);
 
   SchoolInfo get schoolInfo => _schoolInfoState.value;
+
   set schoolInfo(SchoolInfo value) => _schoolInfoState(value);
 
   void previousMealType() {

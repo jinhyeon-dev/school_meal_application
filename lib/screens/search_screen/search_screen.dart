@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:school_meal_application/controller/main_controller.dart';
 import 'package:school_meal_application/controller/school_controller.dart';
 import 'package:get/get.dart';
 import 'package:school_meal_application/model/school_info.dart';
 
 class SearchScreen extends StatefulWidget {
-  SearchScreen({super.key});
+  const SearchScreen({super.key});
 
   @override
   State<SearchScreen> createState() => _SearchScreenState();
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  ScrollController _scrollController = ScrollController();
+  final ScrollController _scrollController = ScrollController();
   final List<SchoolInfo> _data = [];
 
   String _name = '';
-
 
   @override
   void initState() {
@@ -78,7 +76,8 @@ class _SearchScreenState extends State<SearchScreen> {
                 }
                 return const Center(child: CircularProgressIndicator());
               },
-              future: Get.find<SchoolController>().getSchools(controller.index, controller.name),
+              future: Get.find<SchoolController>()
+                  .getSchools(controller.index, controller.name),
             );
           },
         ),
